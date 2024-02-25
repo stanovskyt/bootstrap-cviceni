@@ -1,0 +1,9 @@
+.my_style h1 {
+  color: red;
+  font-weight: bold;
+}
+
+.my_style {
+  display: grid;
+  gap: 15px;
+}

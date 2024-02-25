@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .box-form {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      /* .box-carusel { */
+        /* max-width: 50vw; */
+        /* margin: 0 auto; */
+
+      .svg {
+        max-width: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      }
+    </style>
+  </head>
+
+  <body class="text-white text-center bg-black">
+    <div
+      id="home"
+      class="bg-image text-center container-fluid"
+      style="
+        background-image: url('./img/hotel-annette-small.jpg');
+        background-size: cover;
+        height: 100vh;
+      "
+    >
+      <div class="box-form px-5 py-5">
+        <h1>Candy Hills</h1>
+        <h2>HOTEL</h2>
+        <div class="container bg-secondary bg-opacity-75 p-3 my-4">
+          <form class="needs-validation" novalidate="">
+            <h4 class="mb-3">Quick booking</h4>
+            <div class="row g-2">
+              <div class="col-12">
+                <label for="firstName" class="col-form-label-sm">Name</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="firstName"
+                  placeholder="Jméno"
+                  value=""
+                  required=""
+                />
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="lastName" class="col-form-label-sm">Surname</label>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="lastName"
+                  placeholder="Příjmení"
+                  value=""
+                  required=""
+                />
+                <div class="invalid-feedback">Valid last name is required.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="col-form-label-sm">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="phone" class="col-form-label-sm"
+                  >Phone number:
+                  <span class="text-body-secondary"
+                    >(incl. international dial-up preference)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="phone"
+                  placeholder="+421234567890"
+                />
+              </div>
+
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <label
+                  for="numOfGuests"
+                  class="col-form-label col-form-label-sm"
+                  >Guests:</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="numOfGuests"
+                  placeholder="1"
+                  required=""
+                />
+                <div class="invalid-feedback">
+                  Please enter number of guests.
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <label
+                  for="dateOfArrival"
+                  class="col-form-label col-form-label-sm"
+                  >Arrival:</label
+                >
+                <input
+                  type="date"
+                  class="form-control form-control-sm"
+                  id="dateOfArrival"
+                  placeholder=""
+                  required=""
+                />
+                <div class="invalid-feedback">Date of arrival required.</div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <label
+                  for="dateOfDeparture"
+                  class="col-form-label col-form-label-sm"
+                  >Departure:</label
+                >
+                <input
+                  type="date"
+                  class="form-control form-control-sm"
+                  id="dateOfDeparture"
+                  placeholder=""
+                  required=""
+                />
+                <div class="invalid-feedback">Date of departure required.</div>
+              </div>
+              <div class="col-md-6 my-3">
+                <button class="w-100 btn btn-primary btn-sm" type="submit">
+                  Book now
+                </button>
+              </div>
+
+              <div class="col-md-6 my-3">
+                <button
+                  type="button"
+                  class="w-100 btn btn-primary btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Virtual tour
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="staticBackdrop"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1
+                          class="modal-title fs-5 text-dark"
+                          id="staticBackdropLabel"
+                        >
+                          Virtual tour
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-sticky bottom-0 sticky-top bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-primary" style="color: white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: white">Candy Hills</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active fw-semibold"
+                  aria-current="page"
+                  href="#home"
+                  style="color: white"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white" href="#history"
+                  >History</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing" style="color: white"
+                  >Pricing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#galery" style="color: white"
+                  >Gallery</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" style="color: white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="history" class="container bg-dark my-3 px-5 py-5">
+      <h2 class="py-2">History</h2>
+      <div class="text-start row my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
+            assumenda eveniet quod fugiat iusto perspiciatis voluptatibus,
+            dolores aperiam suscipit dolor, error delectus tempora voluptate at?
+            Neque, alias dolorum natus molestiae vel fuga dolore est nulla
+            soluta esse fugiat. Neque consequatur sequi, minima autem nobis non
+            quod! Aperiam veniam distinctio consequuntur! Laborum eligendi quo
+            tempore in numquam, porro libero a commodi officiis dignissimos ea
+            adipisci illum earum explicabo odit, animi perspiciatis optio fuga
+            debitis facilis id maiores? Ullam tempora consequatur impedit
+            quibusdam magni at ad reiciendis omnis? Quisquam odio blanditiis
+            perferendis rem nulla maxime recusandae, beatae voluptatum quod eum
+            accusantium molestias, veritatis atque unde ullam eligendi, quaerat
+            cumque. Iure assumenda deserunt repellat sunt. Reiciendis dicta
+            excepturi fugit deserunt. Blanditiis voluptatem neque at aspernatur
+            ex non repellendus rem ea, ipsam eaque, dolorem aperiam magni porro
+            odit sed tenetur ipsum fugit harum minus nesciunt magnam. Sunt
+            laborum tenetur perferendis? Sapiente quasi placeat ipsum provident.
+            Expedita pariatur perspiciatis, officiis quo saepe sit nulla
+            architecto vel, eaque ullam culpa alias est impedit error commodi
+            rem beatae minima eos. Tenetur, reprehenderit perferendis!
+            Blanditiis praesentium dicta ipsam in accusamus, eius reiciendis
+            vero et id cum. Quia laudantium necessitatibus autem et cupiditate
+            tenetur quibusdam nesciunt, quidem obcaecati beatae.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus magnam laborum beatae omnis odio qui veniam porro hic
+            dolores minus quaerat maxime vero perspiciatis deserunt nam, saepe
+            laudantium cupiditate ratione tempore doloribus! Laborum asperiores
+            consequatur vero eius. Molestiae mollitia omnis et magnam! Vitae ab
+            fugiat ullam vel? Ullam neque, molestiae molestias aliquid dolores a
+            fugiat dolorum ad sit totam cum aliquam iste, odio et. In vitae
+            recusandae esse, enim expedita tempore? Inventore cum quaerat
+            provident, hic porro neque ipsum vero aliquam, dolorem corporis
+            praesentium nemo asperiores ipsam corrupti? At qui quaerat hic
+            itaque perspiciatis, voluptates saepe consequatur fuga soluta harum
+            eveniet sequi quas sit modi exercitationem inventore quibusdam? Hic
+            pariatur itaque sunt laborum suscipit similique! Deserunt quod
+            libero exercitationem minima? Voluptatem at assumenda a aut
+            consequuntur voluptatibus ipsum magnam ipsam, illum dolores labore!
+            Sequi enim itaque quae iste recusandae quia in iure, veritatis
+            explicabo sit. Aut velit accusamus vel voluptatibus neque, vitae
+            aliquid facilis qui officia consectetur perspiciatis nobis error
+            quos amet commodi assumenda officiis possimus dolores tenetur
+            perferendis. Voluptate aliquid laudantium iure necessitatibus,
+            eligendi magnam enim ipsum blanditiis neque reprehenderit ea
+            laboriosam modi culpa asperiores esse eaque! Voluptas optio nihil
+            molestiae aliquid asperiores magni. Eaque quaerat eius a
+            necessitatibus?
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12 d-none d-md-block">
+          <img
+            src="./img/hotel-annette-small.jpg"
+            class="img-fluid"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="pricing" class="container bg-dark my-3 px-5 py-5">
+      <!-- <div class="px-5 py-3"> -->
+      <h2 class="py-2">Prices</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+          <div class="card">
+            <img src="./img/room_1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-success">
+              <h5 class="card-title text-primary">Economy</h5>
+              <table class="w-100 my-3 text-white">
+                <thead>
+                  <tr class="border-bottom">
+                    <th scope="col">Pers.</th>
+                    <th scope="col">Night</th>
+                    <th scope="col">Week</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-bottom">
+                    <th scope="row">1</th>
+                    <td>35</td>
+                    <td>210</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">2</th>
+                    <td>40</td>
+                    <td>240</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">3</th>
+                    <td>45</td>
+                    <td>270</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn btn-primary">BOOK</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+          <div class="card">
+            <img src="./img/room_2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-success">
+              <h5 class="card-title text-primary">Standard</h5>
+              <table class="w-100 my-3 text-white">
+                <thead>
+                  <tr class="border-bottom">
+                    <th scope="col">Pers.</th>
+                    <th scope="col">Night</th>
+                    <th scope="col">Week</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-bottom">
+                    <th scope="row">1</th>
+                    <td>35</td>
+                    <td>210</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">2</th>
+                    <td>40</td>
+                    <td>240</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">3</th>
+                    <td>45</td>
+                    <td>270</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn btn-primary">BOOK</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+          <div class="card">
+            <img src="./img/room_3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-success">
+              <h5 class="card-title text-primary">Deluxe</h5>
+              <table class="w-100 my-3 text-white">
+                <thead>
+                  <tr class="border-bottom">
+                    <th scope="col">Pers.</th>
+                    <th scope="col">Night</th>
+                    <th scope="col">Week</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-bottom">
+                    <th scope="row">1</th>
+                    <td>35</td>
+                    <td>210</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">2</th>
+                    <td>40</td>
+                    <td>240</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">3</th>
+                    <td>45</td>
+                    <td>270</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn btn-primary">BOOK</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+          <div class="card">
+            <img src="./img/room_4.jpg" class="card-img-top" alt="..." />
+            <div class="card-body bg-success">
+              <h5 class="card-title text-primary">Superior</h5>
+              <table class="w-100 my-3 text-white">
+                <thead>
+                  <tr class="border-bottom">
+                    <th scope="col">Pers.</th>
+                    <th scope="col">Night</th>
+                    <th scope="col">Week</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-bottom">
+                    <th scope="row">1</th>
+                    <td>35</td>
+                    <td>210</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">2</th>
+                    <td>40</td>
+                    <td>240</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <th scope="row">3</th>
+                    <td>45</td>
+                    <td>270</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="#" class="btn btn-primary">BOOK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <div id="galery" class="container bg-dark my-3 px-5 py-5">
+      <!-- <div class="px-5 py-4"> -->
+      <h1 class="py-2">Gallery</h1>
+      <div class="mx-5">
+        <div id="carouselCaptions" class="carousel slide carousel-fade">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/room_1.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Economy room</h5>
+                <p>Nejlevnější třída pokojů, vhodné na kratší pobyty.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/room_2.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Standard room</h5>
+                <p>Dobrá cena, kvalitní pokoje</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/room_3.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Deluxe room</h5>
+                <p>Luxus za dobrou cenu.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/room_4.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Superior room</h5>
+                <p>Nezapomenutelné zážitky.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+
+    <div id="contact" class="container bg-dark my-2">
+      <footer class="p-5 p-4">
+        <h2>Contact us</h2>
+        <div class="row my-5">
+          <div class="col-md-5 col-sm-12" px-5>
+            <iframe
+              class="w-100 p-4"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8748.840664262812!2d18.010650548300315!3d49.75612816949877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2scz!4v1708806519514!5m2!1sen!2scz"
+              width="300"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-md-2">
+            <a href="#" class="svg p-2"
+              ><img src="facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="svg p-2"
+              ><img src="x-twitter.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="svg p-2"
+              ><img src="instagram.svg" alt="Facebook" />
+            </a>
+          </div>
+          <div class="col-md-5 col-sm-12 bg-primary text-center text-black">
+            ahoj
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //navbar
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const collapseNavbar = function () {
+          // Ověříme, zda je navigační menu v rozbalovacím režimu
+          if (window.innerWidth < 992) {
+            const bsCollapse = new bootstrap.Collapse(
+              navbarToggler.nextElementSibling,
+              {
+                toggle: false,
+              }
+            );
+            bsCollapse.hide();
+          }
+        };
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", collapseNavbar);
+        });
+
+        //Vysvětlení:
+        // nextElementSibling je JavaScriptová vlastnost, která vrátí element, který je bezprostředně
+        // následující sourozencem daného elementu v DOM stromu. V tomto případě hledáte element,
+        // který je hned za navbarToggler v HTML struktuře. V kontextu Bootstrap navigace, tento element
+        // obvykle reprezentuje rozbalovací část navigační lišty. Pak vytváříte instanci
+        // Bootstrap Collapse komponenty pro tento element, kterou pak můžete programově skrýt.
+
+        //modal
+        document.querySelectorAll(".modal").forEach(function (modal) {
+          modal.addEventListener("hide.bs.modal", function () {
+            const memory = this.innerHTML;
+            this.innerHTML = memory;
+          });
+        });
+      });
+      //Vysvětlení:
+      // document.querySelectorAll('.modal').forEach(function(modal) {...}):
+      // Vybere všechny elementy s třídou modal a pro každý z nich provede funkci uvedenou v těle forEach.
+      // modal.addEventListener('hide.bs.modal', function() {...}): Přidává posluchače událostí pro každé modální okno,
+      // který reaguje na událost hide.bs.modal - událost specifickou pro Bootstrap, která nastane, když se modální okno začíná skrývat.
+      // var memory = this.innerHTML; this.innerHTML = memory;: Ukládá aktuální HTML obsah modálního okna do proměnné memory a
+      // poté ho okamžitě nastavuje zpět. Toto zachovává aktuální stav modálního okna, i když je skryto.
+    </script>
+  </body>
+</html>
